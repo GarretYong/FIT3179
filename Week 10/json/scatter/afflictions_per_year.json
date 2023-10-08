@@ -1,0 +1,53 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A scatterplot showing body mass and flipper lengths of penguins.",
+    "data": {
+        "url": "https://raw.githubusercontent.com/GarretYong/FIT3179/main/A2/Data/Life%20Expectancy%20Data.csv"
+    },
+    "width": 350,
+    "height": 200,
+    "mark": "point",
+    "params": [
+        {
+            "name": "country_status",
+            "select": {
+                "type": "point",
+                "fields": [
+                    "Status"
+                ]
+            },
+            "bind": "legend"
+        }
+    ],
+    "encoding": {
+        "x": {
+            "field": "Year",
+            "type": "quantitative",
+            "scale": {
+                "zero": false
+            }
+        },
+        "y": {
+            "field": "Measles ",
+            "type": "quantitative",
+            "scale": {
+                "zero": false
+            }
+        },
+        "color": {
+            "field": "Status",
+            "type": "nominal"
+        },
+        "shape": {
+            "field": "Status",
+            "type": "nominal"
+        },
+        "opacity": {
+            "condition": {
+                "param": "country_status",
+                "value": 1
+            },
+            "value": 0.2
+        }
+    }
+}
