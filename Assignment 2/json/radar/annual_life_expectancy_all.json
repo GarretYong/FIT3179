@@ -1,0 +1,273 @@
+{
+    "$schema": "https://vega.github.io/schema/vega/v5.json",
+    "description": "A radar chart example, showing multiple dimensions in a radial layout.",
+    "width": 500,
+    "height": 430,
+    "padding": 100,
+    "title": "Afflictions each year",
+    
+    "config": {
+        "title": {
+            "color": "black",
+            "fontSize": 20,
+            "align": "right"
+        }
+    },
+    "autosize": { "type": "none", "contains": "padding" },
+    "background": " rgb(188, 192, 153)",
+    "signals": [
+        { "name": "radius", "update": "width / 2" }
+    ],
+    "params": [
+        {
+            "name": "Year_selection",
+            "value": 2015,
+            "bind" : {"input": "range", "min": 2000, "max": 2015, "step": 1, "name": "Year Selection: "}
+        }
+    ],
+
+    "data": [{
+            "name": "table",
+            "values": [
+                { "key": "Measels (hundred)", "value": 46.6379235, "category": 2000 },
+                { "key": "BMI", "value": 34.42486188, "category": 2000 },
+                { "key": "Polio", "value": 76.27777778, "category": 2000 },
+                { "key": "HIV", "value": 2.530054645, "category": 2000 },
+                { "key": "Measels (hundred)", "value": 46.40262295, "category": 2001 },
+                { "key": "BMI", "value": 36.1359116, "category": 2001 },
+                { "key": "Polio", "value": 77.95, "category": 2001 },
+                { "key": "HIV", "value": 2.573770492, "category": 2001 },
+                { "key": "Measels (hundred)", "value": 32.04754098, "category": 2002 },
+                { "key": "BMI", "value": 37.11049724, "category": 2002 },
+                { "key": "Polio", "value": 79.67955801, "category": 2002 },
+                { "key": "HIV", "value": 2.573770492, "category": 2002 },
+                { "key": "Measels (hundred)", "value": 37.0879235, "category": 2003 },
+                { "key": "BMI", "value": 36.44033149, "category": 2003 },
+                { "key": "Polio", "value": 80.35359116, "category": 2003 },
+                { "key": "HIV", "value": 2.345901639, "category": 2003 },
+                { "key": "Measels (hundred)", "value": 28.05497268, "category": 2004 },
+                { "key": "BMI", "value": 36.57237569, "category": 2004 },
+                { "key": "Polio", "value": 80.16574586, "category": 2004 },
+                { "key": "HIV", "value": 2.478688525, "category": 2004 },
+                { "key": "Measels (hundred)", "value": 32.00551913, "category": 2005 },
+                { "key": "BMI", "value": 35.60773481, "category": 2005 },
+                { "key": "Polio", "value": 80.97237569, "category": 2005 },
+                { "key": "HIV", "value": 2.345901639, "category": 2005 },
+                { "key": "Measels (hundred)", "value": 20.63224044, "category": 2006 },
+                { "key": "BMI", "value": 37.53425414, "category": 2006 },
+                { "key": "Polio", "value": 84.52747253, "category": 2006 },
+                { "key": "HIV", "value": 2.169398907, "category": 2006 },
+                { "key": "Measels (hundred)", "value": 15.57540984, "category": 2007 },
+                { "key": "BMI", "value": 36.97790055, "category": 2007 },
+                { "key": "Polio", "value": 84.8021978, "category": 2007 },
+                { "key": "HIV", "value": 1.992896175, "category": 2007 },
+                { "key": "Measels (hundred)", "value": 15.23229508, "category": 2008 },
+                { "key": "BMI", "value": 38.22541436, "category": 2008 },
+                { "key": "Polio", "value": 85.56593407, "category": 2008 },
+                { "key": "HIV", "value": 1.79726776, "category": 2008 },
+                { "key": "Measels (hundred)", "value": 15.22606557, "category": 2009 },
+                { "key": "BMI", "value": 39.58342541, "category": 2009 },
+                { "key": "Polio", "value": 85.32967033, "category": 2009 },
+                { "key": "HIV", "value": 1.538797814, "category": 2009 },
+                { "key": "Measels (hundred)", "value": 18.78721311, "category": 2010 },
+                { "key": "BMI", "value": 38.51381215, "category": 2010 },
+                { "key": "Polio", "value": 83.89010989, "category": 2010 },
+                { "key": "HIV", "value": 1.273770492, "category": 2010 },
+                { "key": "Measels (hundred)", "value": 19.63562842, "category": 2011 },
+                { "key": "BMI", "value": 39.84972376, "category": 2011 },
+                { "key": "Polio", "value": 84.44262295, "category": 2011 },
+                { "key": "HIV", "value": 1.092896175, "category": 2011 },
+                { "key": "Measels (hundred)", "value": 12.44382514, "category": 2012 },
+                { "key": "BMI", "value": 40.09944751, "category": 2012 },
+                { "key": "Polio", "value": 83.93989071, "category": 2012 },
+                { "key": "HIV", "value": 0.926775956, "category": 2012 },
+                { "key": "Measels (hundred)", "value": 14.55150259, "category": 2013 },
+                { "key": "BMI", "value": 42.11164021, "category": 2013 },
+                { "key": "Polio", "value": 84.64248705, "category": 2013 },
+                { "key": "HIV", "value": 0.744559585, "category": 2013 },
+                { "key": "Measels (hundred)", "value": 18.3120765, "category": 2014 },
+                { "key": "BMI", "value": 41.03093923, "category": 2014 },
+                { "key": "Polio", "value": 84.72677596, "category": 2014 },
+                { "key": "HIV", "value": 0.681967213, "category": 2014 },
+                { "key": "Measels (hundred)", "value": 15.02901639, "category": 2015 },
+                { "key": "BMI", "value": 42.75414365, "category": 2015 },
+                { "key": "Polio", "value": 83.20765027, "category": 2015 },
+                { "key": "HIV", "value": 0.660655738, "category": 2015 }
+            ]  
+        },
+        {
+            "name": "keys",
+            "source": "table",
+            "transform": [{
+                "type": "aggregate",
+                "groupby": ["key"]
+            }]
+            
+        }
+    ],
+
+    "scales": [{
+            "name": "angular",
+            "type": "point",
+            "range": { "signal": "[-PI+0.8, PI+0.8]" },
+            "padding": 0.5,
+            "domain": { "data": "table", "field": "key" }
+        },
+        {
+            "name": "radial",
+            "type": "linear",
+            "range": { "signal": "[0, radius]" },
+            "zero": true,
+            "nice": false,
+            "domain": { "data": "table", "field": "value" },
+            "domainMin": 0
+        },
+        {
+            "name": "color",
+            "type": "ordinal",
+            "domain": { "data": "table", "field": "category" },
+            "range": { "scheme": "category10" }
+        }
+    ],
+    "encode": {
+        "enter": {
+            "x": { "signal": "radius" },
+            "y": { "signal": "radius" }
+        }
+    },
+    "legends": [{ "fill": "color", "title": "States" }],
+    "marks": [{
+            "type": "group",
+            "name": "categories",
+            "zindex": 1,
+            "tooltip": "true",
+            "from": {
+                "facet": { "data": "table", "name": "facet", "groupby": ["category"] }
+            },
+            "params": [
+                {
+                    "name": "country_status",
+                    "select": {
+                        "type": "line",
+                        "fields": [
+                            "category"
+                        ]
+                    },
+                    "bind": "legend"
+                }
+            ],
+            "marks": [{
+                "type": "line",
+                
+                "tooltip": "true",
+                "name": "category-line",
+                "from": { "data": "facet" },
+                "encode": {
+                    "enter": {
+                        "interpolate": { "value": "linear-closed" },
+                        "x": { "signal": "scale('radial', datum.value) * cos(scale('angular', datum.key))" },
+                        "y": { "signal": "scale('radial', datum.value) * sin(scale('angular', datum.key))" },
+                        "stroke": { "scale": "color", "field": "category" },
+                        "strokeWidth": { "value": 1 },
+                        "fill": { "scale": "color", "field": "category" },
+                        "fillOpacity": { "value": 0.1 },
+                        "tooltip": { "signal": "{'Category': datum.category,'Key': datum.key, 'Value': datum.value }" }
+                    },
+                    "update": { "fill": { "value": "#ccc" } },
+                    "hover": {
+                        "fill": { "value": "purple" }
+                    },
+                    "select": {
+                        "fill": { "value": "0.1" }
+                    }
+                }
+            }]
+        },
+        {
+            "type": "rule",
+            "tooltip": "true",
+            "name": "radial-grid",
+            "from": { "data": "keys" },
+            "zindex": 0,
+            "params": [
+        {
+            "name": "country_status",
+            "select": {
+                "type": "point",
+                "fields": [
+                    "Status"
+                ]
+            },
+            "bind": "legend"
+        }
+    ],
+            "encode": {
+                "enter": {
+                    "x": { "value": 0 },
+                    "y": { "value": 0 },
+                    "x2": { "signal": "radius * cos(scale('angular', datum.key))" },
+                    "y2": { "signal": "radius * sin(scale('angular', datum.key))" },
+                    "stroke": { "value": "lightgray" },
+                    "strokeWidth": { "value": 1 }
+                },
+                "opacity": {
+                    "condition": {
+                        "param": "country_status",
+                        "value": 1
+                    },
+                    "value": 0.2
+                }
+            }
+        },
+        {
+            "type": "text",
+            "name": "key-label",
+            "from": { "data": "keys" },
+            "zindex": 1,
+            "encode": {
+                "enter": {
+                    "x": { "signal": "(radius + 10) * cos(scale('angular', datum.key))" },
+                    "y": { "signal": "(radius + 10) * sin(scale('angular', datum.key))" },
+                    "text": { "field": "key" },
+                    "align": [{
+                            "test": "abs(scale('angular', datum.key)) > PI / 2",
+                            "value": "right"
+                        },
+                        {
+                            "value": "left"
+                        }
+                    ],
+                    "baseline": [{
+                            "test": "scale('angular', datum.key) > 0",
+                            "value": "top"
+                        },
+                        {
+                            "test": "scale('angular', datum.key) == 0",
+                            "value": "middle"
+                        },
+                        {
+                            "value": "bottom"
+                        }
+                    ],
+                    "fill": { "value": "black" },
+                    "fontWeight": { "value": "bold" }
+                }
+            }
+        },
+        {
+            "type": "line",
+            "tooltip": "true",
+            "name": "outer-line",
+            "from": { "data": "radial-grid" },
+            "encode": {
+                "enter": {
+                    "interpolate": { "value": "linear-closed" },
+                    "x": { "field": "x2" },
+                    "y": { "field": "y2" },
+                    "stroke": { "value": "lightgray" },
+                    "strokeWidth": { "value": 1 }
+                }
+            }
+        }
+    ]
+}

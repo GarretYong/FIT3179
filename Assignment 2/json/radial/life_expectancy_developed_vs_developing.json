@@ -1,0 +1,48 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A simple radial chart with embedded data.",
+    "title": "Life Expectancy (Developing vs Developed)",
+    "width": 400,
+    "height": 200,
+    "padding":10,
+    "background": " rgb(188, 192, 153)",
+    "data": {
+      "url": "https://raw.githubusercontent.com/GarretYong/FIT3179/main/A2/Data/Life%20Expectancy%20Data.csv"
+    },
+    "params": [
+          {
+              "name": "Year_selection",
+              "value": 2015,
+              "bind" : {"input": "range", "min": 2000, "max": 2015, "step": 1, "name": "Year Selection: "}
+          }
+    ],
+    "transform": [
+      {"filter": "datum.Year == Year_selection"},
+      {"aggregate": [
+        {"op": "count", "as": "count"},
+        {"op": "mean", "field": "Life expectancy ", "as": "meanLifeExpectancy"}
+      ], "groupby": ["Status"]}
+    ],
+    "layer": [
+      {
+        "mark": {"type": "arc","tooltip": "true", "innerRadius": 20, "stroke": "#fff"}
+      },
+      {
+        "mark": {"type": "text", "radiusOffset": 10},
+        "encoding": {
+          "text": {"field": "meanLifeExpectancy", "type": "quantitative", "format": ".2f"}
+        }
+      }
+    ],
+    "encoding": {
+      "theta": {"field": "count", "type": "quantitative", "stack": true},
+      "radius": {"field": "meanLifeExpectancy", "scale": {"type": "sqrt", "zero": true, "rangeMin": -200, "rangeMax": 100}},
+      "color": {"field": "Status", "type": "nominal", "legend": null},
+      "fill": {"field": "Status", "type": "nominal", "legend": {"title": "Status", "orient": "right"}},
+      "tooltip": [
+        {"field": "meanLifeExpectancy", "type": "quantitative", "title": "Mean Life Expectancy", "format": ".2f"},
+        {"field": "count", "type": "quantitative", "title": "Number of Nations"}
+      ]
+    }
+  }
+  

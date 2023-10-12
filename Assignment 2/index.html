@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Global Life Expectancy</title>
+    <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+    <!-- Import pure.css -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+        integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <!-- CSS file -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+
+
+</head>
+
+
+
+<body>
+
+    <div class="page">
+
+        <!-- pure grid group -->
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <h1>Global Life Expectancy (2000 - 2015)</h1>
+                <p>In the era of globalisation, humans have made leaps and bounds in the fields of
+                    medicine, technology, philosophy and many more. It is of no suprise that the humans in the modern world
+                    live more comfortably than those back then. With this article we can observe whether a higer standard
+                    of living equates to a higher age of living.
+                </p>
+            </div>
+        </div>
+        <!-- end pure grid group -->
+
+        <!-- pure grid group -->
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <div id="vis1" class="vis-container"></div>
+            </div>
+        </div>
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <div id="vis1temp" class="vis-container"></div>
+            </div>
+        </div>
+        <!-- end pure grid group -->
+
+        <!-- pure grid group -->
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <div class="description description-left">
+                    <h2>Global Life Expectancy</h2>
+                    <p>This map shows the life expectancy of each country from the years 2000 to 2015. 
+                        We can observe that over the years, the life expectancy has increased steadily 
+                        over the years. Many factors attribute to this outcome such as social health awareness.
+                        Improvements in the medical field, proper food and frug regulations and many more
+                    </p>
+                    <p>
+
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <!-- end pure grid group -->
+
+
+        <!-- pure grid group -->
+        <div class="pure-g">
+            <div class="pure-u-3-5">
+                <div id="vis2" class="vis-container"></div>
+                <select id="yearIndex", onchange="changeRadar()">
+                    <option value="0">all</option>
+                    <option value="2000">2000</option>
+                    <option value="2001">2001</option>
+                    <option value="2002">2002</option>
+                    <option value="2003">2003</option>
+                    <option value="2004">2004</option>
+                    <option value="2005">2005</option>
+                    <option value="2006">2006</option>
+                    <option value="2007">2007</option>
+                    <option value="2008">2008</option>
+                    <option value="2009">2009</option>
+                    <option value="2010">2010</option>
+                    <option value="2011">2011</option>
+                    <option value="2012">2012</option>
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                </select>
+            </div>
+            <div class="pure-u-2-5">
+                <div class="description description-right">
+                    <h2>Rate of Afflictions each Year</h2>
+                    <p>This graph shows us the number of cases of afflictions that TODO
+                        TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO
+                        TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <!-- end pure grid group -->
+
+        <div class="pure-g">
+            <div class="pure-u-2-5">
+                <p>
+                    (Explanation of sorts for visualisation on the right)
+                </p>
+            </div>
+            <div class="pure-u-3-5">
+                <div id="vis4" class="vis-container"></div>
+                <p>
+                    (Placeholder for bump chart)
+                </p>
+            </div>
+        </div>
+
+        <!-- <div class="pure-g">
+            <div class="pure-u-3-5">
+                <div id="vis4" class="vis-container"></div>
+            </div>
+            <div class="pure-u-2-5">
+                <p>
+                    (Explanation of sorts for visualisation on the left)
+                </p>
+            </div>
+        </div> -->
+
+        
+
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <div id="vis3" class="vis-container"></div>
+            </div>
+        </div>
+        <p>
+            Something placeholder explanation
+        </p>
+        <br>
+        <br>
+        
+        
+
+
+
+    </div> <!-- end page -->
+
+    <script type="text/javascript">
+        // Map
+        var specVis1 = "./json/map/global_life_expectancy.json";
+        var specVis1temp = "./json/line/life_expectancy_over_time.json";
+        // Radar 
+        var specVis2 = "./json/radar/annual_life_expectancy_all.json";
+        // Line chart 1
+        var specVis3 = "./json/line/relation_between_affliction_expenditure.json";
+        // Line scatter plot
+        var specVis4 = "./json/radial/life_expectancy_developed_vs_developing.json"
+
+        vegaEmbed('#vis1', specVis1, { "actions": false });
+        vegaEmbed('#vis1temp', specVis1temp, { "actions": false });
+
+        vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        vegaEmbed('#vis3', specVis3, { "actions": false }).then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        vegaEmbed('#vis4', specVis4, { "actions": false }).then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        function changeRadar() {
+            let year = document.getElementById("yearIndex").value
+            if (year == 0) {
+                vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
+                }).catch(console.error);
+            } else if (year == 2000) {
+                vegaEmbed('#vis2', "./json/radar/annual_life_expectancy_2000.json", { "actions": false }).then(function (result) {
+                }).catch(console.error);
+            } else if (year == 2001) {
+                vegaEmbed('#vis2', "./json/radar/annual_life_expectancy_2001.json", { "actions": false }).then(function (result) {
+                }).catch(console.error);
+            } else if (year == 2002) {
+                vegaEmbed('#vis2', "./json/radar/annual_life_expectancy_2002.json", { "actions": false }).then(function (result) {
+                }).catch(console.error);
+            } else if (year == 2003) {
+                vegaEmbed('#vis2', "./json/radar/annual_life_expectancy_2003.json", { "actions": false }).then(function (result) {
+                }).catch(console.error);
+            } else if (year == 2004) {
+                vegaEmbed('#vis2', "./json/radar/annual_life_expectancy_2004.json", { "actions": false }).then(function (result) {
+                }).catch(console.error);
+            } else if (year == 2005) {
+                vegaEmbed('#vis2', "./json/radar/annual_life_expectancy_2005.json", { "actions": false }).then(function (result) {
+                }).catch(console.error);
+            } else if (year == 2006) {
+                vegaEmbed('#vis2', "./json/radar/annual_life_expectancy_2006.json", { "actions": false }).then(function (result) {
+                }).catch(console.error);
+            } else if (year == 2007) {
+                vegaEmbed('#vis2', "./json/radar/annual_life_expectancy_2007.json", { "actions": false }).then(function (result) {
+                }).catch(console.error);
+            } else if (year == 2008) {
+                vegaEmbed('#vis2', "./json/radar/annual_life_expectancy_2008.json", { "actions": false }).then(function (result) {
+                }).catch(console.error);
+            } else if (year == 2009) {
+                vegaEmbed('#vis2', "./json/radar/annual_life_expectancy_2009.json", { "actions": false }).then(function (result) {
+                }).catch(console.error);
+            } else if (year == 2010) {
+                vegaEmbed('#vis2', "./json/radar/annual_life_expectancy_2010.json", { "actions": false }).then(function (result) {
+                }).catch(console.error);
+            } else if (year == 2011) {
+                vegaEmbed('#vis2', "./json/radar/annual_life_expectancy_2011.json", { "actions": false }).then(function (result) {
+                }).catch(console.error);
+            } else if (year == 2012) {
+                vegaEmbed('#vis2', "./json/radar/annual_life_expectancy_2012.json", { "actions": false }).then(function (result) {
+                }).catch(console.error);
+            } else if (year == 2013) {
+                vegaEmbed('#vis2', "./json/radar/annual_life_expectancy_2013.json", { "actions": false }).then(function (result) {
+                }).catch(console.error);
+            } else if (year == 2014) {
+                vegaEmbed('#vis2', "./json/radar/annual_life_expectancy_2014.json", { "actions": false }).then(function (result) {
+                }).catch(console.error);
+            } else if (year == 2015) {
+                vegaEmbed('#vis2', "./json/radar/annual_life_expectancy_2015.json", { "actions": false }).then(function (result) {
+                }).catch(console.error);
+            } 
+            
+        }
+    </script>
+</body>
+
+</html>

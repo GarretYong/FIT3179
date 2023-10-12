@@ -1,0 +1,29 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {"url": "https://raw.githubusercontent.com/GarretYong/FIT3179/main/A2/Data/Life%20Expectancy%20Data.csv"},
+    "width": 825,
+    "height": 80,
+    "background": " rgb(188, 192, 153)",
+    "transform": [{"window": [{"op": "mean", "field": "Life expectancy ", "as": "lifeExpectancy"}], "groupby": ["Year"]}],
+    "encoding": {
+        "x": {"field": "Year", "type":"temporal"},
+        "y": {"aggregate": "mean",
+            "field": "lifeExpectancy",
+            "type": "quantitative",
+            "title": "Number of Reported Cases",
+            "scale":{"domain": [60,80]}}
+    },
+    "layer": [{
+      "params": [{
+            "name": "hover",
+            "select": {"type": "point", "on": "pointerover", "clear": "pointerout"}
+      }],
+      "mark": "line"
+    }, {
+      "transform": [
+        {"filter": {"param": "hover"}}
+      ],
+      
+      "mark": {"type": "line", "color": "goldenrod"}
+    }]
+  }
