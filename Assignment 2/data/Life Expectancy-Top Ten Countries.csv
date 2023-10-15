@@ -1,0 +1,161 @@
+Country,Year,Status,Life expectancy 
+China,2015,Developing,76.1
+China,2014,Developing,75.8
+China,2013,Developing,75.6
+China,2012,Developing,75.4
+China,2011,Developing,75.2
+China,2010,Developing,75
+China,2009,Developing,74.9
+China,2008,Developing,74.5
+China,2007,Developing,74.4
+China,2006,Developing,74.2
+China,2005,Developing,73.9
+China,2004,Developing,73.5
+China,2003,Developing,73.1
+China,2002,Developing,72.7
+China,2001,Developing,72.2
+China,2000,Developing,71.7
+India,2015,Developing,68.3
+India,2014,Developing,68
+India,2013,Developing,67.6
+India,2012,Developing,67.3
+India,2011,Developing,66.8
+India,2010,Developing,66.4
+India,2009,Developing,66
+India,2008,Developing,65.5
+India,2007,Developing,65.2
+India,2006,Developing,64.8
+India,2005,Developing,64.4
+India,2004,Developing,64
+India,2003,Developing,63.7
+India,2002,Developing,63.3
+India,2001,Developing,62.9
+India,2000,Developing,62.5
+United States of America,2015,Developed,79.3
+United States of America,2014,Developed,79.1
+United States of America,2013,Developed,78.9
+United States of America,2012,Developed,78.8
+United States of America,2011,Developed,78.7
+United States of America,2010,Developed,78.7
+United States of America,2009,Developed,78.5
+United States of America,2008,Developed,78.2
+United States of America,2007,Developed,78.1
+United States of America,2006,Developed,77.8
+United States of America,2005,Developed,77.5
+United States of America,2004,Developed,77.5
+United States of America,2003,Developed,77.2
+United States of America,2002,Developed,77
+United States of America,2001,Developed,76.9
+United States of America,2000,Developed,76.8
+Indonesia,2015,Developing,69.1
+Indonesia,2014,Developing,68.9
+Indonesia,2013,Developing,68.7
+Indonesia,2012,Developing,68.5
+Indonesia,2011,Developing,68.3
+Indonesia,2010,Developing,68.1
+Indonesia,2009,Developing,67.9
+Indonesia,2008,Developing,67.7
+Indonesia,2007,Developing,67.5
+Indonesia,2006,Developing,67.3
+Indonesia,2005,Developing,67.2
+Indonesia,2004,Developing,65.3
+Indonesia,2003,Developing,66.9
+Indonesia,2002,Developing,66.7
+Indonesia,2001,Developing,66.5
+Indonesia,2000,Developing,66.3
+Brazil,2015,Developing,75
+Brazil,2014,Developing,74.8
+Brazil,2013,Developing,74.7
+Brazil,2012,Developing,74.5
+Brazil,2011,Developing,74.1
+Brazil,2010,Developing,73.8
+Brazil,2009,Developing,73.6
+Brazil,2008,Developing,73.4
+Brazil,2007,Developing,73.3
+Brazil,2006,Developing,73
+Brazil,2005,Developing,72.7
+Brazil,2004,Developing,72
+Brazil,2003,Developing,71.8
+Brazil,2002,Developing,71.4
+Brazil,2001,Developing,71
+Brazil,2000,Developing,75
+Pakistan,2015,Developing,66.4
+Pakistan,2014,Developing,66.2
+Pakistan,2013,Developing,66
+Pakistan,2012,Developing,65.7
+Pakistan,2011,Developing,65.5
+Pakistan,2010,Developing,65.1
+Pakistan,2009,Developing,64.8
+Pakistan,2008,Developing,64.6
+Pakistan,2007,Developing,64.4
+Pakistan,2006,Developing,64.2
+Pakistan,2005,Developing,62.9
+Pakistan,2004,Developing,63.7
+Pakistan,2003,Developing,63.5
+Pakistan,2002,Developing,63.2
+Pakistan,2001,Developing,63
+Pakistan,2000,Developing,62.8
+Nigeria,2015,Developing,54.5
+Nigeria,2014,Developing,53.6
+Nigeria,2013,Developing,53.2
+Nigeria,2012,Developing,52.7
+Nigeria,2011,Developing,52.3
+Nigeria,2010,Developing,52
+Nigeria,2009,Developing,51.6
+Nigeria,2008,Developing,59
+Nigeria,2007,Developing,55
+Nigeria,2006,Developing,49.8
+Nigeria,2005,Developing,49.2
+Nigeria,2004,Developing,48.5
+Nigeria,2003,Developing,48.1
+Nigeria,2002,Developing,47.7
+Nigeria,2001,Developing,47.4
+Nigeria,2000,Developing,47.1
+Bangladesh,2015,Developing,71.8
+Bangladesh,2014,Developing,71.4
+Bangladesh,2013,Developing,71
+Bangladesh,2012,Developing,77
+Bangladesh,2011,Developing,73
+Bangladesh,2010,Developing,69.9
+Bangladesh,2009,Developing,69.5
+Bangladesh,2008,Developing,69.1
+Bangladesh,2007,Developing,68.6
+Bangladesh,2006,Developing,68.2
+Bangladesh,2005,Developing,67.8
+Bangladesh,2004,Developing,67.3
+Bangladesh,2003,Developing,66.8
+Bangladesh,2002,Developing,66.3
+Bangladesh,2001,Developing,65.8
+Bangladesh,2000,Developing,65.3
+Russia,2015,Developing,75
+Russia,2014,Developing,73
+Russia,2013,Developing,70
+Russia,2012,Developing,69.6
+Russia,2011,Developing,69.4
+Russia,2010,Developing,68.4
+Russia,2009,Developing,68.2
+Russia,2008,Developing,67.5
+Russia,2007,Developing,67.3
+Russia,2006,Developing,66.4
+Russia,2005,Developing,65
+Russia,2004,Developing,64.9
+Russia,2003,Developing,64.6
+Russia,2002,Developing,64.8
+Russia,2001,Developing,65.1
+Russia,2000,Developing,65
+Mexico,2015,Developing,76.7
+Mexico,2014,Developing,76.6
+Mexico,2013,Developing,76.6
+Mexico,2012,Developing,76.3
+Mexico,2011,Developing,76.1
+Mexico,2010,Developing,75.6
+Mexico,2009,Developing,75.7
+Mexico,2008,Developing,75.6
+Mexico,2007,Developing,76
+Mexico,2006,Developing,75.8
+Mexico,2005,Developing,75.3
+Mexico,2004,Developing,75.4
+Mexico,2003,Developing,75
+Mexico,2002,Developing,75
+Mexico,2001,Developing,75
+Mexico,2000,Developing,74.8

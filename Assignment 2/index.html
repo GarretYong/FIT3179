@@ -33,96 +33,114 @@
         <!-- pure grid group -->
         <div class="pure-g">
             <div class="pure-u-1-1">
+                <hr height="20px" color="#009CDE">
+                <br>
+            </div>
+            <div class="pure-u-1-1">
                 <h1>Global Life Expectancy (2000 - 2015)</h1>
-                <p>In the era of globalisation, humans have made leaps and bounds in the fields of
+            </div>
+            <div class="pure-u-2-5">
+                <hr height="20px" color="#009CDE", width="350px" align="left">
+            </div>
+            <div class="pure-u-1-5">
+                <img src="images/who-logo-png-transparent.png" alt="Italian Trulli" width="80px" class="center">
+            </div>
+            <div class="pure-u-2-5">
+                <hr height="20px" color="#009CDE", width="350px" align="right">
+            </div>
+            <div class="pure-u-1-1">
+                <p align = "justify" style="font-size:20px;color:#1D5B99;">In the era of globalisation, humans have made leaps and bounds in the fields of
                     medicine, technology, philosophy and many more. It is of no suprise that the humans in the modern world
-                    live more comfortably than those back then. With this article we can observe whether a higer standard
+                    live more comfortably than those back then. With this article we can observe whether a higher standard
                     of living equates to a higher age of living.
                 </p>
             </div>
+            
         </div>
         <!-- end pure grid group -->
-
-        <!-- pure grid group -->
+        
         <div class="pure-g">
-            <div class="pure-u-1-1">
+            <div class="pure-u-1-1" style="width: 840px; height:600px; background-color: #1D5B99;border-radius: 25px;
+            padding: 20px; box-shadow: 10px 10px #0a2e3d;border: 3px solid white;">
+                <h2>Life Expectancy Across the World</h2>
                 <div id="vis1" class="vis-container"></div>
-            </div>
-        </div>
-        <div class="pure-g">
-            <div class="pure-u-1-1">
-                <div id="vis1temp" class="vis-container"></div>
-            </div>
-        </div>
-        <!-- end pure grid group -->
-
-        <!-- pure grid group -->
-        <div class="pure-g">
-            <div class="pure-u-1-1">
-                <div class="description description-left">
-                    <h2>Global Life Expectancy</h2>
-                    <p>This map shows the life expectancy of each country from the years 2000 to 2015. 
-                        We can observe that over the years, the life expectancy has increased steadily 
-                        over the years. Many factors attribute to this outcome such as social health awareness.
-                        Improvements in the medical field, proper food and frug regulations and many more
-                    </p>
-                    <p>
-
-                    </p>
-                </div>
-            </div>
-
-        </div>
-        <!-- end pure grid group -->
-
-
-        <!-- pure grid group -->
-        <div class="pure-g">
-            <div class="pure-u-3-5">
-                <div id="vis2" class="vis-container"></div>
-                <select id="yearIndex", onchange="changeRadar()">
-                    <option value="0">all</option>
-                    <option value="2000">2000</option>
-                    <option value="2001">2001</option>
-                    <option value="2002">2002</option>
-                    <option value="2003">2003</option>
-                    <option value="2004">2004</option>
-                    <option value="2005">2005</option>
-                    <option value="2006">2006</option>
-                    <option value="2007">2007</option>
-                    <option value="2008">2008</option>
-                    <option value="2009">2009</option>
-                    <option value="2010">2010</option>
-                    <option value="2011">2011</option>
-                    <option value="2012">2012</option>
-                    <option value="2013">2013</option>
-                    <option value="2014">2014</option>
-                    <option value="2015">2015</option>
-                </select>
-            </div>
-            <div class="pure-u-2-5">
-                <div class="description description-right">
-                    <h2>Rate of Afflictions each Year</h2>
-                    <p>This graph shows us the number of cases of afflictions that TODO
-                        TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO
-                        TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO
-                    </p>
-                </div>
-            </div>
-
-        </div>
-        <!-- end pure grid group -->
-
-        <div class="pure-g">
-            <div class="pure-u-2-5">
-                <p>
-                    (Explanation of sorts for visualisation on the right)
+                <p align = "justify" style="font-size:20px;color:white";">
+                    We live in an age of rapid technological advancements. Over the course of 15 years, we notice that life expectancy
+                    globally has been on the rise. In the past 15 years, developed countries such as <span class="highlight-1">USA</span>,
+                    <span class="highlight-1">China</span> and <span class="highlight-1">Japan</span> have maintained rather consistent life expectancies.
+                    Even so, other countries are starting to catch up and experience an increase in life expectancies. 
                 </p>
             </div>
-            <div class="pure-u-3-5">
-                <div id="vis4" class="vis-container"></div>
-                <p>
-                    (Placeholder for bump chart)
+        </div>
+
+        <div class="pure-g">
+            <div class="pure-u-3-5" style="width: 500px; height:460px; background-color: #1D5B99;border-radius: 25px;
+            padding: 20px; box-shadow: 10px 10px #0a2e3d;border: 3px solid white;">
+                <h2>Ranking of the Top 10 Largest Nations</h2>
+                <div id="vis2" class="vis-container-1" ></div>
+            </div>
+            <div class="pure-u-1-5" style="width: 40px; height:460px;"></div>
+            <div class="pure-u-1-5" style="width: 260px; height:460px; background-color: #1D5B99;border-radius: 25px;
+            padding: 20px; box-shadow: 10px 10px #0a2e3d;border: 3px solid white;">
+                <br>
+                <p align = "justify" style="font-size:20px;color:white";">
+                    This graph displays the countries who have the highest population as of 2015.
+                    <br> <br>
+                    India (except for 2015) has the highest population globally but due to limited funding by the government 
+                    and the population density, there have been little aid provided to the national populous and this has led to 
+                    India despite being the "biggest nation" to rank so low in the top 10 nations in terms of life expectancy
+                </p>
+            </div>
+        </div>
+
+        <div class="pure-g">
+            <div class="pure-u-1-5" style="width: 260px; height:420px; background-color: #1D5B99;border-radius: 25px;
+            padding: 20px; box-shadow: 10px 10px #0a2e3d;border: 3px solid white;">
+                
+                <p align = "justify" style="font-size:20px;color:white";">
+                    As of the year 2015, 17.48% countries in the world have been recognised by the World Health Organisation (WHO) to be labelled as developed nations.
+                    <br>
+                    <br>
+                    However, we notice that overall, that advancements in fields of these developed nations such as medical and educational that these countries maintain
+                    a higher life expectancy than other lesser / under-developed nations. 
+                </p>
+                
+            </div>
+            <div class="pure-u-1-5" style="width: 40px; height:420px;"></div>
+            <div class="pure-u-3-5" style="width: 500px; height:420px; background-color: #1D5B99;border-radius: 25px;
+            padding: 20px; box-shadow: 10px 10px #0a2e3d;border: 3px solid white;">
+                <h2>Life Expectancy (Developing vs Developed)</h2>
+                <div id="vis4" class="vis-container-2"></div>
+            </div>
+        </div>
+
+        <div class="pure-g">
+            <div class="pure-u-3-5" style="width: 500px; height:500px; background-color: #1D5B99;border-radius: 25px;
+            padding: 20px; box-shadow: 10px 10px #0a2e3d;border: 3px solid white;">
+                <h2>Adult and Child Mortality</h2>
+                <div class="pure-g">
+                    <div class="pure-u-1-2">
+                        <div id="vis5" class="vis-container-4" ></div>  
+                    </div>
+                    <div class="pure-u-1-2"> 
+                        <img src="images/Legend-Vis5.png" alt="Italian Trulli" class="img-container">
+                    </div>
+                </div>
+                
+                
+            </div>
+            <div class="pure-u-1-5" style="width: 40px; height:500px;"></div>
+            <div class="pure-u-1-5" style="width: 260px; height:500px; background-color: #1D5B99;border-radius: 25px;
+            padding: 20px; box-shadow: 10px 10px #0a2e3d;border: 3px solid white;">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <p align = "justify" style="font-size:20px;color:white";">
+                    Through 15 whole years of advancements, we can be proud to show that the annual <span class="highlight-7">Adult Mortality </span>and 
+                    <span class="highlight-8">Infant Death </span>has been decreasing steadily as the years pass by. In the case of 
+                    <span class="highlight-8">Infant Death</span>, has been expereincing steady decline with the advancements made in the healthcare
                 </p>
             </div>
         </div>
@@ -141,15 +159,31 @@
         
 
         <div class="pure-g">
-            <div class="pure-u-1-1">
-                <div id="vis3" class="vis-container"></div>
+            <div class="pure-u-1-1" style="width: 840px; height:900px; background-color: #1D5B99;border-radius: 25px;
+            padding: 20px; box-shadow: 10px 10px #0a2e3d;border: 3px solid white;">
+                <h2>Afflictions per Year</h2>
+                <div id="vis3" class="vis-container-3"></div>
+                <div style = " 
+                    width:200px; 
+                    height:20px; 
+                    position:relative; 
+                    top:-220px; 
+                    left:620px; 
+                    z-index:3;">
+                    By 2007, death by <span class="highlight-3">Measles </span> have dropped by a whole <b>60%</b> globally as compared to 1999 thanks to mass vaccination campaigns targeting children. (“Global Goal to Reduce Measles Deaths in Children Surpassed,” 2007)
+                </div>
+                <p align = "justify" style="font-size:20px;color:white;">
+                    Observing the trends, we notice that despite there being a decrease in <span class="highlight-2">percentage expenditure </span>a visible decrease 
+                    in the number of reported cases of <span class="highlight-3">Measles </span>and <span class="highlight-3">HIV/AIDS</span>. Despite that, there has
+                    been an increase in the average human <span class="highlight-5">BMI </span>and reported cases of <span class="highlight-6">Polio</span>.
+                </p>
+                <p align = "justify" style="font-size:20px;color:white;">
+                    Due in part to the COVID-19 pandemic, the world has seen a worrying drop in immunization rates over the past few years, creating pockets of under-immunized 
+                    communities at heightened risk of polio infection and paralysis. Children missing polio vaccinations creates opportunities for <span class="highlight-6">Polio</span> 
+                    to re-emerge and spread. (“Why Is Polio Making a ‘Comeback’ and What Can We Do about It?,” 2023)
+                </p>
             </div>
         </div>
-        <p>
-            Something placeholder explanation
-        </p>
-        <br>
-        <br>
         
         
 
@@ -162,11 +196,13 @@
         var specVis1 = "./json/map/global_life_expectancy.json";
         var specVis1temp = "./json/line/life_expectancy_over_time.json";
         // Radar 
-        var specVis2 = "./json/radar/annual_life_expectancy_all.json";
+        var specVis2 = "./json/bump/top10_biggest_country_ranking.json";
         // Line chart 1
         var specVis3 = "./json/line/relation_between_affliction_expenditure.json";
         // Line scatter plot
         var specVis4 = "./json/radial/life_expectancy_developed_vs_developing.json"
+
+        var specVis5 = "./json/line/adult_and_child_mortatilty_over_time.json"
 
         vegaEmbed('#vis1', specVis1, { "actions": false });
         vegaEmbed('#vis1temp', specVis1temp, { "actions": false });
@@ -180,6 +216,10 @@
         }).catch(console.error);
 
         vegaEmbed('#vis4', specVis4, { "actions": false }).then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        vegaEmbed('#vis5', specVis5, { "actions": false }).then(function (result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
 

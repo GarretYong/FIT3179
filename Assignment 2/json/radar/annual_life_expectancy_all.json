@@ -1,20 +1,24 @@
 {
     "$schema": "https://vega.github.io/schema/vega/v5.json",
     "description": "A radar chart example, showing multiple dimensions in a radial layout.",
-    "width": 500,
-    "height": 430,
+    "width": 440,
+    "height": 360,
     "padding": 100,
-    "title": "Afflictions each year",
-    
+    "background": null,
     "config": {
         "title": {
             "color": "black",
             "fontSize": 20,
             "align": "right"
+        },
+        "text": {
+            "color": "white"
+        },
+        "legend": {
+            "color": "white"
         }
     },
     "autosize": { "type": "none", "contains": "padding" },
-    "background": " rgb(188, 192, 153)",
     "signals": [
         { "name": "radius", "update": "width / 2" }
     ],

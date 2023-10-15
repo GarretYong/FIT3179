@@ -1,9 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "GDP Per Capita for each country in 2023",
-    "width": 760,
+    "width": 745,
     "height": 300,
-    "background": " rgb(188, 192, 153)",
+    "background": null,
     "data": {
         "url": "https://raw.githubusercontent.com/GarretYong/FIT3179/main/A2/Data/Life%20Expectancy%20Data.csv"
     },
@@ -12,6 +11,14 @@
         "Year",
         "Life expectancy "
     ],
+    "config": {
+        "view": {
+          "stroke": "transparent"
+        },
+        "text": {
+            "color": "white"
+        }
+    },
     "params": [
         {
             "name": "Year_selection",
@@ -158,6 +165,7 @@
                         "field": "Life expectancy ",
                         "type": "quantitative"
                     }
+                    
                 ]
             }
         }

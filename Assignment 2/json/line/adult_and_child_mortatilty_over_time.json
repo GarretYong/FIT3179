@@ -1,0 +1,40 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 330, "height": 300, "padding":30,"background": null,
+    "data": {"url": "https://raw.githubusercontent.com/GarretYong/FIT3179/main/A2/Data/Life%20Expectancy%20Data.csv"},
+    
+    "transform": [
+      {"window": [{"op": "mean", "field": "Adult Mortality", "as": "AdultMortality"}], "groupby": ["Year"]},
+      {"window": [{"op": "mean", "field": "infant deaths", "as": "InfantDeaths"}], "groupby": ["Year"]}
+    ],
+    "repeat": {
+      "layer": ["AdultMortality","InfantDeaths"]
+    },
+    "spec":{
+      "layer": [
+        {
+          "mark": "area",
+          "encoding": {
+            "x": {
+              "field": "Year"
+            },
+            "y": {
+              "aggregate": "mean",
+              "field": {"repeat": "layer"},
+              "type": "quantitative",
+              "title": "Number of Reported Cases"
+            },
+            "color": {
+              "aggregate": "mean",
+              "field": {"repeat": "layer"},
+              "type": "nominal",
+              "title": "Number of Reported Cases",
+              "legend": null,
+              "scale": {"range": ["#8871A0", "#A2C3DB"]}
+            }
+          }
+        }
+      ]
+    }
+    
+  }

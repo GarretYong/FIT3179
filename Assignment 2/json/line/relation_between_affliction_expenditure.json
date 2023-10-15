@@ -1,8 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 660,
-  "height": 300,
-  "background": " rgb(188, 192, 153)",
+  "width": 525,
+  "height": 400,
+  "padding": 30,
+  "background": "white",
   "data": {
     "url": "https://raw.githubusercontent.com/GarretYong/FIT3179/main/A2/Data/Life%20Expectancy%20Data.csv"
   },
